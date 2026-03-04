@@ -1,75 +1,109 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Araf | Web Developer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg py-3 hidden">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-nav shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Araf's Portfolio</a>
-            <button id="theme-toggle" class="btn btn-outline-secondary rounded-pill shadow-sm">
-                ☀️ Light Mode
+            <a class="navbar-brand fw-bold fs-4" href="#home">Araf.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3 fw-semibold">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <header class="container text-center py-5 my-5 hidden">
-        <h1 class="display-3 fw-bold mb-4">Hi, I'm Araf.</h1>
-        <p class="lead mb-5">I am a web developer currently building interactive projects with HTML, CSS, and JavaScript. Welcome to my digital workspace.</p>
-        <a href="#projects" class="btn btn-primary btn-lg rounded-pill px-4 shadow">View My Work</a>
+    <header id="home" class="container text-center text-white min-vh-100 d-flex flex-column justify-content-center align-items-center hidden">
+        <h1 class="display-2 fw-bolder mb-3 text-shadow">Hi, I'm Araf.</h1>
+        <p class="lead fs-3 mb-5 fw-medium text-shadow">A front-end developer and designer bringing ideas to life.</p>
+        <a href="#projects" class="btn btn-light btn-lg rounded-pill px-5 py-3 fw-bold text-primary shadow-lg hover-btn">View My Work</a>
     </header>
 
-    <section id="projects" class="container py-5">
-        <h2 class="text-center mb-5 fw-bold hidden">My Projects</h2>
-        <div class="row g-4">
+    <section id="about" class="container py-5 my-5 hidden">
+        <div class="row bg-white rounded-5 shadow-lg p-5 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="fw-bold mb-4 text-primary">About Me</h2>
+                <p class="fs-5 text-muted">
+                    I am a developer currently focusing on mastering HTML, CSS, JavaScript, and Bootstrap. I love combining code with my passion for graphics design and photo editing to create visually striking user experiences.
+                </p>
+                <p class="fs-5 text-muted">
+                    When I'm not studying for my web dev exams or working on my PC, you can usually find me organizing projects with my event management team or planning trips to beautiful spots like Cox's Bazar, Shrimangal, and Tanguar Haor.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="fw-bold mb-3 text-primary">My Toolkit</h3>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-danger fs-6 py-2 px-3 shadow-sm rounded-pill">HTML5</span>
+                    <span class="badge bg-info text-dark fs-6 py-2 px-3 shadow-sm rounded-pill">CSS3</span>
+                    <span class="badge bg-warning text-dark fs-6 py-2 px-3 shadow-sm rounded-pill">JavaScript</span>
+                    <span class="badge bg-primary fs-6 py-2 px-3 shadow-sm rounded-pill">Bootstrap 5</span>
+                    <span class="badge bg-dark fs-6 py-2 px-3 shadow-sm rounded-pill">Java</span>
+                    <span class="badge bg-secondary fs-6 py-2 px-3 shadow-sm rounded-pill">UI/UX Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container py-5 my-5">
+        <h2 class="text-center mb-5 fw-bold text-white text-shadow hidden">My Recent Projects</h2>
+        <div class="row g-5">
             
             <div class="col-md-4 hidden">
-                <div class="card glass-card h-100 border-0">
+                <div class="card project-card h-100 border-0 rounded-4 shadow-lg overflow-hidden">
                     <div class="hover-img">
-                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Budget Tracker">
+                        <img src="https://via.placeholder.com/600x400/FF5E7E/ffffff?text=Budget+Tracker" class="card-img-top" alt="Budget Tracker">
                     </div>
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold">JS Budget Tracker</h5>
-                        <p class="card-text">A lightweight utility application built to track expenses and manage budgets dynamically using vanilla JavaScript.</p>
-                        <div class="mt-auto">
-                            <a href="#" class="btn btn-sm btn-outline-primary shadow-sm">Live Demo</a>
-                            <a href="#" class="btn btn-sm btn-dark shadow-sm">GitHub Repo</a>
+                    <div class="card-body d-flex flex-column p-4">
+                        <h5 class="card-title fw-bold fs-4">JS Budget Tracker</h5>
+                        <p class="card-text text-muted mb-4">A lightweight utility application built to track expenses and manage budgets dynamically using vanilla JavaScript.</p>
+                        <div class="mt-auto d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary fw-bold rounded-pill w-100">Live Demo</a>
+                            <a href="#" class="btn btn-dark fw-bold rounded-pill w-100"><i class="bi bi-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 hidden">
-                <div class="card glass-card h-100 border-0">
+                <div class="card project-card h-100 border-0 rounded-4 shadow-lg overflow-hidden">
                     <div class="hover-img">
-                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Kinetic Trails">
+                        <img src="https://via.placeholder.com/600x400/00C9FF/ffffff?text=Kinetic+Trails" class="card-img-top" alt="Kinetic Trails">
                     </div>
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold">Kinetic Trails Homepage</h5>
-                        <p class="card-text">A responsive front-end concept for a travel group utilizing Bootstrap for seamless mobile viewing.</p>
-                        <div class="mt-auto">
-                            <a href="#" class="btn btn-sm btn-outline-primary shadow-sm">Live Demo</a>
-                            <a href="#" class="btn btn-sm btn-dark shadow-sm">GitHub Repo</a>
+                    <div class="card-body d-flex flex-column p-4">
+                        <h5 class="card-title fw-bold fs-4">Kinetic Trails</h5>
+                        <p class="card-text text-muted mb-4">A responsive front-end homepage concept for a travel group utilizing HTML, CSS, and Bootstrap.</p>
+                        <div class="mt-auto d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary fw-bold rounded-pill w-100">Live Demo</a>
+                            <a href="#" class="btn btn-dark fw-bold rounded-pill w-100"><i class="bi bi-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 hidden">
-                <div class="card glass-card h-100 border-0">
+                <div class="card project-card h-100 border-0 rounded-4 shadow-lg overflow-hidden">
                     <div class="hover-img">
-                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Kinetic Coffee Logo">
+                        <img src="https://via.placeholder.com/600x400/FFD700/333333?text=Kinetic+Coffee" class="card-img-top" alt="Kinetic Coffee Logo">
                     </div>
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold">Kinetic Coffee Brand</h5>
-                        <p class="card-text">Custom graphics and visual identity design created for the Kinetic Coffee brand concept.</p>
+                    <div class="card-body d-flex flex-column p-4">
+                        <h5 class="card-title fw-bold fs-4">Kinetic Coffee Brand</h5>
+                        <p class="card-text text-muted mb-4">Custom graphics and visual identity design created from scratch for a modern coffee shop concept.</p>
                         <div class="mt-auto">
-                            <a href="#" class="btn btn-sm btn-outline-primary shadow-sm">View Design</a>
+                            <a href="#" class="btn btn-outline-primary fw-bold rounded-pill w-100">View Design</a>
                         </div>
                     </div>
                 </div>
@@ -78,18 +112,22 @@
         </div>
     </section>
 
-    <section class="container text-center py-5 mb-5 hidden">
-        <h3 class="fw-bold mb-4">Current Toolkit</h3>
-        <div class="d-flex justify-content-center flex-wrap gap-2">
-            <span class="badge bg-danger fs-6 py-2 px-3 shadow-sm">HTML5</span>
-            <span class="badge bg-info text-dark fs-6 py-2 px-3 shadow-sm">CSS3</span>
-            <span class="badge bg-warning text-dark fs-6 py-2 px-3 shadow-sm">JavaScript</span>
-            <span class="badge bg-primary fs-6 py-2 px-3 shadow-sm">Bootstrap 5</span>
+    <footer id="contact" class="bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container text-center hidden">
+            <h3 class="fw-bold mb-4">Let's Connect</h3>
+            <p class="fs-5 mb-4 opacity-75">I'm always open to discussing new projects, design ideas, or PC hardware.</p>
+            
+            <div class="d-flex justify-content-center gap-4 mb-5">
+                <a href="#" class="text-white fs-2 social-icon"><i class="bi bi-envelope-fill"></i></a>
+                <a href="#" class="text-white fs-2 social-icon"><i class="bi bi-github"></i></a>
+                <a href="#" class="text-white fs-2 social-icon"><i class="bi bi-whatsapp"></i></a>
+                <a href="#" class="text-white fs-2 social-icon"><i class="bi bi-discord"></i></a>
+                <a href="#" class="text-white fs-2 social-icon"><i class="bi bi-facebook"></i></a>
+            </div>
+            
+            <hr class="border-secondary mb-3">
+            <p class="mb-0 opacity-50 small">&copy; 2026 Araf. Designed & Built from scratch.</p>
         </div>
-    </section>
-
-    <footer class="text-center py-4 hidden">
-        <p class="mb-0 opacity-75">&copy; 2026 Araf. Built from scratch.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
